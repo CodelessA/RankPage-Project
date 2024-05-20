@@ -1,0 +1,202 @@
+/*General settings Start*/
+html,
+body {
+  scroll-behavior: smooth;
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: var(--backgroundcolor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-content {
+  display: flex;
+  height: 100vh;
+}
+/*General settings End*/
+
+/*Variables for colors Start*/
+:root {
+  --backgroundcolor: white;
+  --navigationcolor: rgb(6, 0, 30);
+  --maincontentcolor: #d7ecff;
+}
+/*Variables for colors End*/
+
+/*Navigation bar settings Start*/
+#section-nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background: var(--navigationcolor);
+  height: 100vh;
+  width: 20vw;
+  padding: 20px;
+  overflow: auto;
+}
+
+#navigation-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#navigation-li a {
+  display: block;
+  width: 90%;
+  padding: 8px 16px;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+}
+
+#section-nav ul li {
+  margin: 20px 0;
+}
+
+#navigation-li a:hover {
+  color: white;
+  background: radial-gradient(circle, rgb(184, 2, 71) 0%, rgb(137, 2, 36) 100%);
+  border-radius: 5px;
+}
+
+h2 {
+  color: rgb(228, 241, 252);
+  text-align: center;
+  font-size: 2em;
+}
+
+.h2span {
+  color: rgb(245, 83, 24);
+}
+
+.creator {
+  color: whitesmoke;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+}
+/*Navigation bar settings End*/
+
+/*Content section Start*/
+.section-change {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: linear-gradient(
+    90deg,
+    var(--maincontentcolor),
+    var(--maincontentcolor)
+  );
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.sections {
+  min-width: 80vw;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-align: start;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+/*Content section End*/
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #section-nav {
+    width: 25vw;
+  }
+
+  .sections {
+    min-width: 75vw;
+  }
+}
+
+@media (max-width: 992px) {
+  #section-nav {
+    width: 30vw;
+  }
+
+  .sections {
+    min-width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #section-nav {
+    width: 35vw;
+  }
+
+  .sections {
+    min-width: 65vw;
+  }
+}
+
+@media (max-width: 576px) {
+  #section-nav {
+    width: 40vw;
+  }
+
+  .sections {
+    min-width: 60vw;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Mobile Design */
+@media (max-width: 480px) {
+  #section-nav {
+    width: 50vw;
+  }
+
+  .sections {
+    min-width: 50vw;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+}
+
+/*Content section End*/
+
+/*<------------------Possible to use ----------------------->
+:root {
+  --general-color1: #06121d;
+  
+  --navbar-colorMid: #01203c;
+  --hr-color: #1f0234;
+  --main-color: #dfe8f0;
+}
+
+background: linear-gradient(
+    90deg,
+    var(--navbar-color1),
+    #01203c,
+    var(--navbar-color1)
+  );
+*/
