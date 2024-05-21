@@ -129,7 +129,7 @@ h3 {
 /*-----------------Movies div start-----------------*/
 #movies {
   position: relative;
-  background-image: url(/Photos/realfish.jpg);
+  background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/realfish.jpg?raw=true");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
