@@ -192,7 +192,7 @@ h3 {
 
 #games {
   position: relative;
-  background-image: url(/Photos/gamebckgroundphoto.jpg);
+  background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/gamebckgroundphoto.jpg?raw=true");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
