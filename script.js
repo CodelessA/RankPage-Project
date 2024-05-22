@@ -13,3 +13,17 @@ document.querySelectorAll('#navigation-ul li a').forEach(anchor => {
     });
 });
 //----Navigation settings End----//
+
+//---Info Panel controller start----//
+  document.addEventListener('DOMContentLoaded', function () {
+    const movies = document.querySelectorAll('#movies-div div');
+    const infoContent = document.getElementById('info-content');
+
+    movies.forEach(movie => {
+      movie.addEventListener('click', function () {
+        const movieInfo = this.querySelector('p').innerText;
+        infoContent.innerText = `Informacje o wybranym elemencie: ${movieInfo}`;
+      });
+    });
+  });
+//---Info Panel controller end----//
