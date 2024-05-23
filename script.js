@@ -17,7 +17,10 @@ document.querySelectorAll('#navigation-ul li a').forEach(anchor => {
 //---Info Panel controller start----//
   document.addEventListener('DOMContentLoaded', function () {
     const movies = document.querySelectorAll('#movies-div div');
+    const games = document.querySelectorAll('#games-div div');
+
     const infoContent = document.getElementById('info-content');
+    const infoContentG = document.getElementById('info-contentG');
 
     movies.forEach(movie => {
       movie.addEventListener('click', function () {
@@ -25,5 +28,12 @@ document.querySelectorAll('#navigation-ul li a').forEach(anchor => {
         infoContent.innerText = `Informacje o wybranym elemencie: ${movieInfo}`;
       });
     });
-  });
+    
+    games.forEach(game => {
+      game.addEventListener('click', function () {
+        const gameInfo = this.querySelector('p').innerText;
+        infoContentG.innerText = `Informacje o wybranym elemencie: ${gameInfo}`;
+      });
+    });
+});
 //---Info Panel controller end----//

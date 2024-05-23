@@ -22,14 +22,14 @@ body {
 
 /*-----------------Variables for colors Start-----------------*/
 :root {
-  --backgroundcolor: white;
+  --backgroundcolor: rgb(17, 1, 25);
   --navigationcolor: linear-gradient(
-    90deg,
-    rgba(43, 7, 78, 1) 0%,
-    rgba(26, 4, 47, 1) 50%,
-    rgba(43, 7, 78, 1) 100%
+    219deg,
+    rgb(9, 0, 22) 0%,
+    rgb(7, 4, 47) 50%,
+    rgba(9, 0, 22, 1) 100%
   );
-  --maincontentcolor: #d7ecff;
+  --maincontentcolor: #043d09;
 }
 /*-----------------Variables for colors End-----------------*/
 
@@ -40,9 +40,8 @@ body {
   flex-direction: column;
   flex-shrink: 0;
   background: var(--navigationcolor);
-  box-shadow: 10px 10px 8px #000000;
   height: 100vh;
-  width: 20vw;
+  width: 18vw;
   padding: 20px;
   overflow: auto;
 }
@@ -79,17 +78,20 @@ body {
 
 h2 {
   color: rgb(228, 241, 252);
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
   font-size: 2em;
+  box-shadow: 5px 5px 15px 2px #000000;
+  border-radius: 20px;
 }
 
 .h2span {
-  color: rgb(245, 83, 24);
+  color: rgb(243, 73, 11);
 }
 
 .creator {
   color: whitesmoke;
-  text-align: center;
   position: absolute;
   bottom: 0;
   font-size: 18px;
@@ -113,7 +115,7 @@ h2 {
 }
 
 .sections {
-  min-width: 80vw;
+  min-width: 82vw;
   height: 100vh;
   overflow-y: auto;
   scroll-snap-align: start;
@@ -203,16 +205,17 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 70%;
+  max-width: 65%;
 }
 
 #games-div div {
   border: 1px solid whitesmoke;
   padding: 10px;
-  max-height: 150px;
-  max-width: 150px;
+  height: 150px;
+  width: 150px;
   background: black;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #games {
@@ -222,6 +225,9 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 #games::before {
@@ -239,6 +245,27 @@ h3 {
 #games > * {
   position: relative;
   z-index: 2;
+}
+
+#games h3 {
+  margin-bottom: 20px;
+}
+
+#games-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#info-panelG {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.84);
+  color: white;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 /*-----------------Games div end-----------------*/
 
