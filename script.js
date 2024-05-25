@@ -32,7 +32,7 @@ document.querySelectorAll('#navigation-ul li a').forEach(anchor => {
     games.forEach(game => {
       game.addEventListener('click', function () {
         const gameInfo = this.querySelector('p').innerText;
-        infoContentG.innerText = `Informacje o wybranym elemencie: ${gameInfo}`;
+        infoContentG.innerText = `Informacje: ${gameInfo}`;
       });
     });
 });
