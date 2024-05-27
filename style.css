@@ -25,9 +25,9 @@ body {
   --backgroundcolor: rgb(17, 1, 25);
   --navigationcolor: linear-gradient(
     219deg,
-    rgb(9, 0, 22) 0%,
-    rgb(7, 4, 47) 50%,
-    rgba(9, 0, 22, 1) 100%
+    rgb(10, 1, 21) 0%,
+    rgb(5, 3, 40) 50%,
+    rgb(10, 1, 21) 100%
   );
   --maincontentcolor: #043d09;
 }
@@ -129,7 +129,20 @@ h3 {
 }
 
 /*-----------------Movies div start-----------------*/
-#movies {
+/*-------------------------------------------------------*/
+/*-----------------Mutual settings start-----------------*/
+/*-------------------------------------------------------*/
+#movies-div,
+#games-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 45px;
+  max-width: 65%;
+}
+
+#movies,
+#games {
   position: relative;
   background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/realfish.jpg?raw=true");
   background-size: cover;
@@ -141,119 +154,7 @@ h3 {
   flex-direction: column;
 }
 
-#movies::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.419);
-  backdrop-filter: blur(10px);
-  z-index: 1;
-}
-
-#movies > * {
-  position: relative;
-  z-index: 2;
-}
-
-#movies h3 {
-  margin-bottom: 20px;
-}
-
-#movies-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-#movies-div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 45px;
-  max-width: 65%;
-}
-
-#movies-div div {
-  padding: 10px;
-  height: 150px;
-  width: 150px;
-  background: rgba(0, 0, 0, 0.405);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.5s;
-}
-
-#movies-div div:hover {
-  color: rgb(21, 134, 27);
-  transform: scale(1.1, 1.1);
-}
-
-#info-panel {
-  flex: 1;
-  background: rgba(0, 0, 0, 0.444);
-  color: white;
-  padding: 20px;
-  margin-left: 20px;
-  border-radius: 10px;
-  max-width: 30%;
-  display: flex;
-  flex-direction: column;
-}
-
-/*-----------------Movies div end-----------------*/
-
-/*-----------------Games div start-----------------*/
-#games-div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 45px;
-  max-width: 65%;
-}
-
-#games-div div {
-  height: 150px;
-  width: 150px;
-  background: rgba(0, 0, 0, 0.405);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.5s;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.988);
-}
-
-#games-div div:hover {
-  color: blueviolet;
-  transform: scale(1.1, 1.1);
-}
-
-#games-div div img {
-  width: 149px;
-  height: 149px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-}
-
-#games-div div p {
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-weight: 500;
-}
-
-#games {
-  position: relative;
-  background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/gamebckgroundphoto.jpg?raw=true");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
+#movies::before,
 #games::before {
   content: "";
   position: absolute;
@@ -266,23 +167,33 @@ h3 {
   z-index: 1;
 }
 
+#movies > *,
 #games > * {
   position: relative;
   z-index: 2;
 }
 
+#movies-div div,
+#games-div div {
+  padding: 1px;
+  height: 150px;
+  width: 150px;
+  background: rgba(0, 0, 0, 0.405);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.988);
+}
+
+#movies h3,
 #games h3 {
   margin-bottom: 20px;
 }
 
-#games-content {
-  display: flex;
-  justify-content: space-between;
-}
-
+#info-panel,
 #info-panelG {
   flex: 1;
-  background: rgba(0, 0, 0, 0.84);
+  background: rgba(0, 0, 0, 0.444);
   color: white;
   padding: 20px;
   margin-left: 20px;
@@ -291,6 +202,41 @@ h3 {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.988);
+}
+
+#movies-div div:hover,
+#games-div div:hover {
+  color: blueviolet;
+  transform: scale(1.1, 1.1);
+}
+
+#movies-content,
+#games-content {
+  display: flex;
+  justify-content: space-between;
+}
+/*-------------------------------------------------------*/
+/*-----------------Mutual settings end-----------------*/
+/*-------------------------------------------------------*/
+/*-----------------Movies div end-----------------*/
+
+/*-----------------Games div start-----------------*/
+#games {
+  background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/gamebckgroundphoto.jpg?raw=true");
+}
+
+#games-div div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+#games-div div p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
 }
 /*-----------------Games div end-----------------*/
 
@@ -363,20 +309,4 @@ h3 {
     font-size: 1em;
   }
 }
-
-/*<------------------Possible to use ----------------------->
-:root {
-  --general-color1: #06121d;
-  
-  --navbar-colorMid: #01203c;
-  --hr-color: #1f0234;
-  --main-color: #dfe8f0;
-}
-
-background: linear-gradient(
-    90deg,
-    var(--navbar-color1),
-    #01203c,
-    var(--navbar-color1)
-  );
-*/
+/*-----------------END-----------------*/
