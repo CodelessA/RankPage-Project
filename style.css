@@ -18,8 +18,8 @@ body {
   display: flex;
   height: 100vh;
 }
-/*-----------------General settings End-----------------*/
-
+/*-----------------General settings End-------------------------*/
+/*-------------------------------------------------------------*/
 /*-----------------Variables for colors Start-----------------*/
 :root {
   --backgroundcolor: rgb(17, 1, 25);
@@ -32,8 +32,8 @@ body {
   --maincontentcolor: #043d09;
 }
 /*-----------------Variables for colors End-----------------*/
-
-/*-----------------Navigation bar settings Start-----------------*/
+/*---------------------------------------------------------*/
+/*-----------------Navigation bar settings Start----------*/
 #section-nav {
   box-sizing: border-box;
   display: flex;
@@ -58,6 +58,7 @@ body {
   color: aliceblue;
   text-decoration: none;
   text-align: center;
+  font-size: 1.1em;
 }
 
 #section-nav ul li {
@@ -76,6 +77,13 @@ body {
   border-radius: 8px;
 }
 
+.active {
+  background: radial-gradient(circle, rgb(184, 2, 71) 0%, rgb(137, 2, 36) 100%);
+  color: white;
+  border-radius: 8px;
+  width: 90%;
+}
+
 h2 {
   color: rgb(228, 241, 252);
   padding-top: 8px;
@@ -87,18 +95,18 @@ h2 {
 }
 
 .h2span {
-  color: rgb(243, 73, 11);
+  color: orangered;
 }
 
 .creator {
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
-  font-size: 18px;
+  font-size: 0.9em;
 }
 /*-----------------Navigation bar settings End-----------------*/
-
-/*-----------------Content section Start-----------------*/
+/*------------------------------------------------------------*/
+/*-----------------Content section Start---------------------*/
 .section-change {
   display: flex;
   flex-direction: row;
@@ -112,6 +120,7 @@ h2 {
   );
   box-sizing: border-box;
   scroll-behavior: smooth;
+  z-index: 2;
 }
 
 .sections {
@@ -127,11 +136,58 @@ h3 {
   font-size: 1.8em;
   color: aliceblue;
 }
+/*-------------------------------------------------------------*/
+/*-----------------INFORMATIONS SECTION start-----------------*/
+#informations {
+  position: relative;
+  background-image: url("https://github.com/CodelessA/Codeless-program/blob/main/HighwayNight.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
 
-/*-----------------Movies div start-----------------*/
+#informations::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.419);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+#informations-div {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.485);
+  color: white;
+  padding: 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 75%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.988);
+  z-index: 4;
+}
+
+#informations-div p {
+  font-size: 1.1em;
+}
+/*-----------------INFORMATIONS SECTION end-----------------*/
+/*---------------------------------------------------------*/
+/*-----------------Movies div start-----------------------*/
 /*-------------------------------------------------------*/
-/*-----------------Mutual settings start-----------------*/
-/*-------------------------------------------------------*/
+/*-----------------Mutual settings start----------------*/
+/*-----------------------------------------------------*/
 #movies-div,
 #games-div {
   display: flex;
@@ -144,7 +200,7 @@ h3 {
 #movies,
 #games {
   position: relative;
-  background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/realfish.jpg?raw=true");
+  background-image: url("https://github.com/CodelessA/Codeless-program/blob/main/woman-.jpg?raw=true");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -168,7 +224,8 @@ h3 {
 }
 
 #movies > *,
-#games > * {
+#games > *,
+#informations {
   position: relative;
   z-index: 2;
 }
@@ -183,6 +240,12 @@ h3 {
   cursor: pointer;
   transition: transform 0.5s;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.988);
+}
+
+#movies-div div:hover,
+#games-div div:hover {
+  color: blueviolet;
+  transform: scale(1.1, 1.1);
 }
 
 #movies h3,
@@ -204,23 +267,17 @@ h3 {
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.988);
 }
 
-#movies-div div:hover,
-#games-div div:hover {
-  color: blueviolet;
-  transform: scale(1.1, 1.1);
-}
-
 #movies-content,
 #games-content {
   display: flex;
   justify-content: space-between;
 }
+/*---------------------------------------------------------*/
+/*-----------------Mutual settings end--------------------*/
 /*-------------------------------------------------------*/
-/*-----------------Mutual settings end-----------------*/
-/*-------------------------------------------------------*/
-/*-----------------Movies div end-----------------*/
-
-/*-----------------Games div start-----------------*/
+/*-----------------Movies div end-----------------------*/
+/*-----------------------------------------------------*/
+/*-----------------Games div start--------------------*/
 #games {
   background-image: url("https://github.com/CodelessA/RankPage-Project/blob/main/gamebckgroundphoto.jpg?raw=true");
 }
@@ -228,7 +285,7 @@ h3 {
 #games-div div img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
   border-radius: 10px;
 }
@@ -237,11 +294,13 @@ h3 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: 500;
+  display: none;
 }
-/*-----------------Games div end-----------------*/
 
+/*-----------------Games div end-------------------------*/
+/*------------------------------------------------------*/
 /*-----------------Content section End-----------------*/
-
+/*----------------------------------------------------*/
 /*-----------------Responsive Design-----------------*/
 @media (max-width: 1200px) {
   #section-nav {
