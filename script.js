@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>Muzyka: ${details.ratings.music}</li>
             <li>Grafika: ${details.ratings.graphics}</li>
           </ul>
-          <p>${aboutGame.about}</p>
+          <p>${details.aboutGame.about}</p>
         `;
       } else {
         infoContentG.innerText = `Informacje: ${gameInfo}`;
