@@ -28,14 +28,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //----Navigation settings End----//
-
-//---Info Panel controller start----//
+////////////////////////////////////////
+//----Info Panel controller start----//
 document.addEventListener("DOMContentLoaded", function () {
   const movies = document.querySelectorAll("#movies-div div");
   const games = document.querySelectorAll("#games-div div");
 
   const infoContent = document.getElementById("info-content");
   const infoContentG = document.getElementById("info-contentG");
+
+  const gameDetails = {
+    "Doom 2016": {
+      description: "Doom 2016",
+      ratings: {
+        story: "2/5",
+        music: "5/5",
+        graphics: "4/5",
+      },
+      aboutGame: {
+        about: "",
+      },
+    },
+
+    "Doom Eternal": {
+      description: "Doom Eternal",
+      ratings: {
+        story: "2/5",
+        music: "4/5",
+        graphics: "4/5",
+      },
+
+      aboutGame: {
+        about: "",
+      },
+    },
+
+    Stray: {
+      description: "Stray",
+      ratings: {
+        story: "4/5",
+        music: "3/5",
+        graphics: "4/5",
+      },
+
+      aboutGame: {
+        about:
+          "Jedyny w swoim rodzaju symulator kota, który w dodatku posiada linię fabularną.",
+      },
+    },
+  };
 
   movies.forEach((movie) => {
     movie.addEventListener("click", function () {
@@ -47,8 +88,22 @@ document.addEventListener("DOMContentLoaded", function () {
   games.forEach((game) => {
     game.addEventListener("click", function () {
       const gameInfo = this.querySelector("p").innerText;
-      infoContentG.innerText = `Informacje: ${gameInfo}`;
+      const details = gameDetails[gameInfo];
+      if (details) {
+        infoContentG.innerHTML = `
+          <p><strong>Opis:</strong> ${details.description}</p>
+          <ul>
+            <li>Fabuła: ${details.ratings.story}</li>
+            <li>Muzyka: ${details.ratings.music}</li>
+            <li>Grafika: ${details.ratings.graphics}</li>
+          </ul>
+          <p>${aboutGame.about}</p>
+        `;
+      } else {
+        infoContentG.innerText = `Informacje: ${gameInfo}`;
+      }
     });
   });
 });
-//---Info Panel controller end----//
+//----Info Panel controller end----//
+////////////////////////////////////
