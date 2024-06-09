@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
         graphics: "4/5",
       },
       aboutGame: {
-        about: "",
+        about:
+          "Klasyczna pierwszoosobowa strzelanka, która poprawiła wszystko to, z czego zasłynęły poprzednie części.",
       },
     },
 
@@ -76,6 +77,47 @@ document.addEventListener("DOMContentLoaded", function () {
           "Jedyny w swoim rodzaju symulator kota, który w dodatku posiada linię fabularną.",
       },
     },
+
+    Gothic: {
+      description: "Gothic",
+      ratings: {
+        story: "4/5",
+        music: "3/5",
+        graphics: ":)/5",
+      },
+
+      aboutGame: {
+        about: "Klasyka wśród gier RPG",
+      },
+    },
+
+    "Gothic II": {
+      description: "Gothic II",
+      ratings: {
+        story: "5/5",
+        music: "4/5",
+        graphics: ":)/5",
+      },
+
+      aboutGame: {
+        about:
+          "Klasyk i jedna z najlepszych gier w jakie grałem. Nostalgia 100%",
+      },
+    },
+
+    "Gothic III": {
+      description: "Gothic II",
+      ratings: {
+        story: "3/5",
+        music: "4/5",
+        graphics: "2,5/5",
+      },
+
+      aboutGame: {
+        about:
+          "Mniej udana, chociaż broniąca się przyjemną ścieżką dźwiękową kontynuacja Gothic I i Gothic II.",
+      },
+    },
   };
 
   movies.forEach((movie) => {
@@ -91,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const details = gameDetails[gameInfo];
       if (details) {
         infoContentG.innerHTML = `
-          <p><strong>Opis:</strong> ${details.description}</p>
+          <strong><p>Opis: ${details.description}</p></strong>
           <ul>
             <li>Fabuła: ${details.ratings.story}</li>
             <li>Muzyka: ${details.ratings.music}</li>
