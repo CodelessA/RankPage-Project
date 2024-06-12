@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       aboutGame: {
         about:
-          "Klasyk i jedna z najlepszych gier w jakie grałem. Nostalgia 100%",
+          "Klasyk i jedna z najlepszych gier w jakie grałem.",
       },
     },
 
