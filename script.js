@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       aboutGame: {
         about:
-          "Klasyk i jedna z najlepszych gier w jakie grałem.",
+          "Klasyk i jedna z najlepszych gier, w jakie grałem. Gra jest utrzymana w naprawdę świetnym klimacie...",
       },
     },
 
@@ -116,6 +116,51 @@ document.addEventListener("DOMContentLoaded", function () {
       aboutGame: {
         about:
           "Mniej udana, chociaż broniąca się przyjemną ścieżką dźwiękową kontynuacja Gothic I i Gothic II.",
+      },
+    },
+
+    Witcher: {
+      description: "Wiedźmin I",
+      ratings: {
+        story: "4/5",
+        music: "4/5",
+        graphics: "2,5/5",
+      },
+
+      aboutGame: {
+        overall: "4/5",
+        about:
+          "Oparta na książkach A. Sapkowskiego gra o Wiedźminie Geralcie...",
+      },
+    },
+
+    "Witcher II": {
+      description: "Wiedźmin II",
+      ratings: {
+        story: "4/5",
+        music: "4,5/5",
+        graphics: "3/5",
+      },
+
+      aboutGame: {
+        overall: "4/5",
+        about:
+          "Oparta na książkach A. Sapkowskiego gra o Wiedźminie Geralcie...",
+      },
+    },
+
+    "Witcher III": {
+      description: "Wiedźmin III",
+      ratings: {
+        story: "5/5",
+        music: "5/5",
+        graphics: "4/5",
+      },
+
+      aboutGame: {
+        overall: "5/5",
+        about:
+          "Najlepsza część z serii, jedna z najlepszych gier, jakie kiedykolwiek wydano. Przedstawiona historia, ścieżka dźwiękowa... Zalety można wymieniać długo.",
       },
     },
   };
@@ -139,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>Muzyka: ${details.ratings.music}</li>
             <li>Grafika: ${details.ratings.graphics}</li>
           </ul>
+          <p>Ocena ogólna: ${details.aboutGame.overall}</p>
           <p>${details.aboutGame.about}</p>
         `;
       } else {
